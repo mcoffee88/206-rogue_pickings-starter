@@ -1,0 +1,256 @@
+@font-face{
+	font-family: 'Wisdom Script';
+	src: url('../fonts/wisdom-script.otf') format('opentype');
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	display:flex;
+	justify-content: center;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 1em;
+	display:flex;
+	justify-content: center;
+	flex-flow: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+p {
+	font-size: .75em;
+	line-height: 1.3125em;
+}
+
+/*****  Header Styles.  The widths are in a percentage!  ******/
+header {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
+	font-size: .875em;  /*  14px  */
+}
+
+header h1 {
+	margin: .2em 0 0;
+	padding: .75em 0 .5em;  /*  38px  */
+	font-size: 2.14em;  /*  30px  */
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
+}
+header h1 span {
+	color: #77a466;
+}
+
+header nav ul {
+	margin: 15 0;
+	padding: 0;
+	list-style: none;
+}
+header nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .86em;  /*  12px  */
+	line-height: 3em;
+}
+header nav ul li a{
+	text-decoration: none;
+	color:#77a466;
+}
+
+/*****  Top Section.  The widths are in a percentage!  ****/
+.top-section {
+	font-size: .875em;  /*  14px  */
+}
+
+.main-image {
+	height: auto;
+}
+
+.main-image img {
+	width: 100%;
+	border-bottom: 3px solid #77a466;
+}
+
+.main-title h3 {
+	padding: .357em 0em;  /*  5px 0  */
+	color: #77a466;
+	font-size: 1.286em;  /*  18px  */
+}
+
+.main-title p {
+	padding: 0;
+	font-size: 1.143em;  /*  16px  */
+	line-height: 1.55em;  /*  25px  */
+}
+
+/*****    Bottom Section    *****/
+.bottom-section {
+	font-size: 1em;  /* 16px */
+}
+
+.bottom-section p {
+	font-size: 1em;  /*  16px  */
+}
+
+.section-one,
+.section-two,
+.section-three {
+	height: auto;
+	border-top: 1px solid #eee;
+}
+
+.section-one h4 {
+	font-size: .75em;  /*  12px  */
+}
+
+.section-two h4,
+.section-three h4 {
+	font-size: .75em;  /*  12px  */
+}
+
+.menu {
+	list-style: none;
+	padding: 0;
+}
+.menu li {
+	padding: .63em 0;  /*  10px 0  */
+	color:#77a466;
+}
+
+.reviews {
+	color: #333;
+	line-height: 1.312em;  /*  21px  */
+}
+
+.address {
+	line-height: 1.75em;  /*  24px  */
+}
+
+/*The widths are in a percentage!*/
+footer {
+	font-size: .75em;  /*  12px  */
+	height: 4.167em;  /*  50px  */
+	border-top: 3px solid #eee;
+	/*margin: 0 auto;*/
+	/*text-align: center;*/
+	display:flex;
+	justify-content: center;
+}
+
+footer h4 {
+	font-size: 1em;  /*  12px  */
+}
+
+footer span {
+	font-family: 'Wisdom Script', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+	font-size: 1.167em;  /*  14px  */
+}
+
+/*****  Tablet styles here  *****/
+@media all and (min-width:768px) {
+	.container {
+		width:85%;
+	}
+
+	.bottom-section {
+		display:flex;
+		/*justify-content: space-between;*/
+		justify-content:flex-start;
+		flex-flow: row nowrap;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		/*width: 33%;*/
+		height: auto;
+		display:flex;
+		justify-content: flex-start;
+		flex-flow: column nowrap;
+	}
+
+	.section-one {
+		width: 30%;
+	}
+		.section-two {
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+			width: 36%;
+			display:flex;
+			justify-content: flex-start;
+		}
+
+		.section-two h4, p {
+			padding: 0 1em;
+		}
+
+		.section-three {
+			width: 30%;
+		}
+
+		.section-three h4, p {
+			padding-left: 1em;
+		}
+
+/*****  Desktop styles here *****/
+@media all and (min-width:940px) {
+
+	header {
+		display:flex;
+		flex-flow: row nowrap;
+	}
+
+	header h1 {
+		display:flex;
+		justify-content: flex-start;
+		border: none;
+	}
+
+	header nav {
+		padding: 2em 0;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header nav ul li {
+		padding: 0 .714em;  /*  0 10px  */
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		height: auto;
+	}
+
+		.section-two {
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+		}
+
+}
